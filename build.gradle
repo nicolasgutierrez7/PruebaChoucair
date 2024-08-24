@@ -1,0 +1,81 @@
+plugins {
+    id 'java'
+    id 'idea'
+    id "net.serenity-bdd.serenity-gradle-plugin" version "3.3.10"
+    id "io.freefair.lombok" version "6.5.1"
+    id "net.gradleutil.gradle-conf" version "1.1.15"
+}
+
+defaultTasks 'clean', 'test', 'aggregate'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+sourceCompatibility = 17
+targetCompatibility = 17
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+
+ext {
+    slf4jVersion = '1.7.25'
+    serenityCoreVersion = '3.7.1'
+    serenityCucumberVersion = '3.7.1'
+    junitVersion = '5.9.0'
+    assertJVersion = '3.23.1'
+    logbackVersion = '1.2.11'
+    jacksonAnnotations = "2.13.3"
+}
+
+wrapper {
+    gradleVersion '7.6'
+    distributionType Wrapper.DistributionType.ALL
+}
+
+dependencies {
+    implementation group: 'log4j',name: 'log4j',version: '1.2.17'
+    implementation group: 'com.microsoft.sqlserver', name: 'mssql-jdbc', version: '11.2.3.jre17'
+    implementation group: 'com.oracle.database.jdbc', name: 'ojdbc10', version: '19.18.0.0'
+
+    implementation (
+            "net.serenity-bdd:serenity-core:${serenityCoreVersion}",
+            "net.serenity-bdd:serenity-cucumber:${serenityCucumberVersion}",
+            "net.serenity-bdd:serenity-screenplay:${serenityCoreVersion}",
+            "net.serenity-bdd:serenity-screenplay-webdriver:${serenityCoreVersion}",
+            "net.serenity-bdd:serenity-ensure:${serenityCoreVersion}",
+            "ch.qos.logback:logback-classic:${logbackVersion}",
+            "com.fasterxml.jackson.core:jackson-annotations:${jacksonAnnotations}",
+            "org.junit.jupiter:junit-jupiter-api:${junitVersion}",
+            "org.assertj:assertj-core:${assertJVersion}",
+            group: 'org.json', name: 'json', version: '20220320'
+    )
+    testImplementation(
+            "net.serenity-bdd:serenity-core:${serenityCoreVersion}",
+            "net.serenity-bdd:serenity-screenplay:${serenityCoreVersion}",
+            "net.serenity-bdd:serenity-screenplay-webdriver:${serenityCoreVersion}",
+            "net.serenity-bdd:serenity-ensure:${serenityCoreVersion}",
+            "net.serenity-bdd:serenity-cucumber:${serenityCucumberVersion}",
+            "org.junit.jupiter:junit-jupiter-api:${junitVersion}",
+            "org.assertj:assertj-core:${assertJVersion}",
+    )
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
+}
+
+test {
+    systemProperties System.getProperties()
+}
+
+serenity {
+    // Specify the root package of any JUnit acceptance tests
+    testRoot="repaso"
+
+    // Specify the root directory of any Cucumber feature files
+    requirementsDir = "src/test/resources/features"
+}
+
+gradle.startParameter.continueOnFailure = true
+
+test.finalizedBy(aggregate)
