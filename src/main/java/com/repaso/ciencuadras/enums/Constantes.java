@@ -3,12 +3,13 @@ package com.repaso.ciencuadras.enums;
 public enum Constantes {
 
     USER_DIR("user.dir"),
-    URL_CIENCUADRAS ("https://www.ciencuadras.com/arriendo?utm_source=google&utm_medium=cpc&utm_campaign=arriendormkt&utm_content=search&gad_source=1&gclid=EAIaIQobChMIttWvmu-EiAMV7bdaBR1KsQd-EAAYASAAEgKwyvD_BwE"),
+    URL_CIENCUADRAS ("https://demo.serenity.is/Account/Login/?ReturnUrl=%2F"),
     MENSAJE_ERROR_LECTURA_ARCHIVO("No se logró leer el archivo de forma exitosa"),
 
-    DATOS_PROPIETARIO("datosPropietario"),
-
+    DATOS_PROPIETARIO("datoscliente"),
+    DATOS_SESION("datosSesion"),
     RUTA_INFORMACION_PORPIETARIO(System.getProperty(USER_DIR.getValor()) + "\\src\\test\\resources\\json\\informacion_propietario.json"),
+    RUTA_INFORMACION_SESION(System.getProperty(USER_DIR.getValor()) + "\\src\\test\\resources\\json\\informacion_Sesion.json"),
 
     SALTO_LINEA("\n");
 

@@ -41,6 +41,16 @@ public class LeerJson {
         return informacionPropietario;
     }
 
+    public static String leerDatosSesion(String informacion) {
+        String archivo = leerArchivo(RUTA_INFORMACION_SESION.getValor());
+        JSONObject jsonObject = new JSONObject(archivo);
+        JSONArray jsonArray = jsonObject.getJSONArray(DATOS_SESION.getValor());
+        String informacionSesin;
+        informacionSesin = jsonArray.getJSONObject(CERO).getJSONObject(informacion).toString();
+
+        return informacionSesin;
+    }
+
 
 
 

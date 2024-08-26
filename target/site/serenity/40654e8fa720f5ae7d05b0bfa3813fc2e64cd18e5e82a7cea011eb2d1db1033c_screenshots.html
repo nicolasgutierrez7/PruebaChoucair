@@ -1,0 +1,329 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">com_repaso_ciencueadras</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="4c42b0ecf351ff2d0ce041f22cc25070718abf90b359c1b09e5ed9fcdc38c302.html">Crear Cuenta En La Pagina De Ciencuadras</a></span>
+                > <span class="truncate-60"><a
+                    href="40654e8fa720f5ae7d05b0bfa3813fc2e64cd18e5e82a7cea011eb2d1db1033c.html">crear cuenta propietario </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 26-08-2024 15:03</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Crear Cuenta En La Pagina De Ciencuadras </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="6fe0671aeea9e76b6998ee682216d11c7748a4152740df0586f3c256ecb3f5da.html">Chrome
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="f55cf301e8f51d63aebeb8bc8dbe880df940586e2a502c7a3e24c2b639523f8f.html">Windows
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="fa6240930fdbc18bb769cd3f99f6c79a9ae540bd58975cdbf962200efa0a89e5.html">Registro
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="59736924e81ea98f655ac8eba7cd96079d8d80131e0c4360daf32a724d0b38a0.html">Chrome, Windows
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-x-circle-fill failure-icon fa-2x' title='FAILURE'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="failing-color">crear cuenta propietario
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Cuando el usuario ingresa las credenciales "&lt;datosSesion&gt;"<br>Y el usuario ingresa los datos para crear cuenta "&lt;datoscliente&gt;"<br>Entonces el usuario valida la creacion exitosa</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Element should be present exception: Expected condition failed: waiting for By.xpath: //div[@id='select2-result-label-59'] to be present (tried for 5 second(s) with 100 milliseconds interval)Build info: version: '4.9.0', revision: 'd7057100a6'System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'Driver info: driver.version: unknown</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall"
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="bi bi-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>net.thucydides.core.webdriver.exceptions.ElementShouldBePresentException </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>com.repaso.ciencuadras.tasks.Registro.performAs(Registro.java:23)<br />com.repaso.ciencuadras.stepdefinitions.RegistroStepDefinitions.el_usuario_ingresa_los_datos_para_crear_cuenta(RegistroStepDefinitions.java:21)<br />io.cucumber.java.Invoker.doInvoke(Invoker.java:66)<br />io.cucumber.java.Invoker.invoke(Invoker.java:24)<br />io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)<br />io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)<br />io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)<br />io.cucumber.core.runner.TestStep.run(TestStep.java:56)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)<br />io.cucumber.core.runner.TestCase.run(TestCase.java:84)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java:75)<br />io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:130)<br />io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)<br />io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:130)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)<br />io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)<br />io.cucumber.junit.CucumberSerenityBaseRunner.runChild(CucumberSerenityBaseRunner.java:330)<br />io.cucumber.junit.CucumberSerenityBaseRunner.runChild(CucumberSerenityBaseRunner.java:51)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)<br /></pre>
+                    </div>
+
+                    <h4>
+                        Caused by: org.openqa.selenium.TimeoutException
+                    </h4>
+                    <div>
+                            <pre>Expected condition failed: waiting for By.xpath: //div[@id='select2-result-label-59'] to be present (tried for 5 second(s) with 100 milliseconds interval)<br>Build info: version: '4.9.0', revision: 'd7057100a6'<br>System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.8'<br>Driver info: driver.version: unknown</pre>
+                        <pre>com.repaso.ciencuadras.tasks.Registro.performAs(Registro.java :23)<br />com.repaso.ciencuadras.stepdefinitions.RegistroStepDefinitions.el_usuario_ingresa_los_datos_para_crear_cuenta(RegistroStepDefinitions.java :21)<br />io.cucumber.java.Invoker.doInvoke(Invoker.java :66)<br />io.cucumber.java.Invoker.invoke(Invoker.java :24)<br />io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java :47)<br />io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java :29)<br />io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java :66)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java :63)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java :84)<br />io.cucumber.core.runner.TestStep.run(TestStep.java :56)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java :51)<br />io.cucumber.core.runner.TestCase.run(TestCase.java :84)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java :75)<br />io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java :130)<br />io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java :23)<br />io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java :130)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java :144)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java :28)<br />io.cucumber.junit.FeatureRunner.run(FeatureRunner.java :137)<br />io.cucumber.junit.CucumberSerenityBaseRunner.runChild(CucumberSerenityBaseRunner.java :330)<br />io.cucumber.junit.CucumberSerenityBaseRunner.runChild(CucumberSerenityBaseRunner.java :51)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java :69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java :74)<br /></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+                    <div class="panel-body">
+                        <a href="pagesource6844396276263410610.html" target="_blank" class="btn btn-info">HTML Source</a>
+                    </div>
+            </div>
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="0b5d2d838e6bf69d7b9614728d1aec4c7a1edde6ab87600073ba72ebff6d4192.png" title=" 1: crear cuenta propietario ({datosSesion=datosSesion1, datoscliente=datoscliente1})" width="1920"/>
+                <img src="0b5d2d838e6bf69d7b9614728d1aec4c7a1edde6ab87600073ba72ebff6d4192.png" title=" Dado el usuario ha ingresado  a la pagina de cien cuadras" width="1920"/>
+                <img src="0b5d2d838e6bf69d7b9614728d1aec4c7a1edde6ab87600073ba72ebff6d4192.png" title=" El usuario ingresa" width="1920"/>
+                <img src="0b5d2d838e6bf69d7b9614728d1aec4c7a1edde6ab87600073ba72ebff6d4192.png" title=" Dado el usuario ha ingresado  a la pagina de cien cuadras (completed)" width="1920"/>
+                <img src="0b5d2d838e6bf69d7b9614728d1aec4c7a1edde6ab87600073ba72ebff6d4192.png" title=" Cuando el usuario ingresa las credenciales &quot;datosSesion1&quot;" width="1920"/>
+                <img src="0b5d2d838e6bf69d7b9614728d1aec4c7a1edde6ab87600073ba72ebff6d4192.png" title=" El usuario iniciar" width="1920"/>
+                <img src="0b5d2d838e6bf69d7b9614728d1aec4c7a1edde6ab87600073ba72ebff6d4192.png" title=" el usuario enters 'admin' into Boton Ingresar" width="1920"/>
+                <img src="673b131a3a14c668eba3eae4e9879072eb2d4f71cc9446546878796aea6d5b9b.png" title=" el usuario enters 'admin' into Boton Ingresar (completed)" width="1920"/>
+                <img src="673b131a3a14c668eba3eae4e9879072eb2d4f71cc9446546878796aea6d5b9b.png" title=" el usuario enters 'serenity' into Boton Registrarse" width="1920"/>
+                <img src="84712b1fa39d56f04ee30f17afc0e74b19a0ef7e3e5271fe01b2c8f7e5ee78d2.png" title=" el usuario enters 'serenity' into Boton Registrarse (completed)" width="1920"/>
+                <img src="84712b1fa39d56f04ee30f17afc0e74b19a0ef7e3e5271fe01b2c8f7e5ee78d2.png" title=" el usuario clicks on Boton Propietario" width="1920"/>
+                <img src="372140b9a3361efd22d4ee1a7467fc2e0b2db4bb81ca4683841ba90353e96b1a.png" title=" el usuario clicks on Boton Propietario (completed)" width="1920"/>
+                <img src="372140b9a3361efd22d4ee1a7467fc2e0b2db4bb81ca4683841ba90353e96b1a.png" title=" El usuario iniciar (completed)" width="1920"/>
+                <img src="372140b9a3361efd22d4ee1a7467fc2e0b2db4bb81ca4683841ba90353e96b1a.png" title=" Cuando el usuario ingresa las credenciales &quot;datosSesion1&quot; (completed)" width="1920"/>
+                <img src="372140b9a3361efd22d4ee1a7467fc2e0b2db4bb81ca4683841ba90353e96b1a.png" title=" Y el usuario ingresa los datos para crear cuenta &quot;datoscliente1&quot;" width="1920"/>
+                <img src="5029503a914db2b9d9bc95a9348dd483d204c8b942b31e61eef70db5800a6c0e.png" title=" El usuario registro" width="1920"/>
+                <img src="ab20b888f3653c9cef6e7bd29d8b6b3af7d4250583cc94afbd41560d6c666f71.png" title=" el usuario clicks on Boton menu" width="1920"/>
+                <img src="16888a197b1f5d1b855f5b269a372f0d3738c5ef50c59a5701e983ffc772c375.png" title=" el usuario clicks on Boton menu (completed)" width="1920"/>
+                <img src="16888a197b1f5d1b855f5b269a372f0d3738c5ef50c59a5701e983ffc772c375.png" title=" el usuario clicks on Boton Registrarse" width="1920"/>
+                <img src="a47f91e71c17d6a2b4b8bb2654a239a149d2fe637db6f77bc8f1d62a2a6c6798.png" title=" el usuario clicks on Boton Registrarse (completed)" width="1920"/>
+                <img src="a47f91e71c17d6a2b4b8bb2654a239a149d2fe637db6f77bc8f1d62a2a6c6798.png" title=" el usuario clicks on Boton Propietario" width="1920"/>
+                <img src="0adcf9976afb56ff538c4de619b0b8cd9a2309037d0d9b376da0dfc82f4052a5.png" title=" el usuario clicks on Boton Propietario (completed)" width="1920"/>
+                <img src="0adcf9976afb56ff538c4de619b0b8cd9a2309037d0d9b376da0dfc82f4052a5.png" title=" el usuario clicks on Boton Propietario" width="1920"/>
+                <img src="ca910e45bcc9ba10df8d9b16d765cef999e83a138da9d5ef2054dbcc5f5fd58a.png" title=" el usuario clicks on Boton Propietario (completed)" width="1920"/>
+                <img src="ca910e45bcc9ba10df8d9b16d765cef999e83a138da9d5ef2054dbcc5f5fd58a.png" title=" el usuario enters '1233503524' into Boton Ingresar" width="1920"/>
+                <img src="eecafb863a53f76101c34fb099728602e21a6d9f83357f03b6ea738df18f1f85.png" title=" el usuario enters '1233503524' into Boton Ingresar (completed)" width="1920"/>
+                <img src="eecafb863a53f76101c34fb099728602e21a6d9f83357f03b6ea738df18f1f85.png" title=" el usuario enters 'CHOUCAIR' into Boton Registrarse" width="1920"/>
+                <img src="c3796d3feb2dc949a2b16b580d8e83d1fc7a1a8e4673acbe72958c22ac7a6df9.png" title=" el usuario enters 'CHOUCAIR' into Boton Registrarse (completed)" width="1920"/>
+                <img src="c3796d3feb2dc949a2b16b580d8e83d1fc7a1a8e4673acbe72958c22ac7a6df9.png" title=" el usuario enters 'NICOLAS' into Boton Propietario" width="1920"/>
+                <img src="4c1c8a14f4e90e695cf6f06726a156f4fc44bb2da8c8b45fc8e66f030aa93f92.png" title=" el usuario enters 'NICOLAS' into Boton Propietario (completed)" width="1920"/>
+                <img src="4c1c8a14f4e90e695cf6f06726a156f4fc44bb2da8c8b45fc8e66f030aa93f92.png" title=" el usuario enters 'NICOLAS TEST' into Numero Documento" width="1920"/>
+                <img src="ac63737e24988284d71b2f4523acf52b4e2f51d0697870470000127d2ddf03b3.png" title=" el usuario enters 'NICOLAS TEST' into Numero Documento (completed)" width="1920"/>
+                <img src="ac63737e24988284d71b2f4523acf52b4e2f51d0697870470000127d2ddf03b3.png" title=" el usuario enters 'Andrew Fuller' into Nombre Completo" width="1920"/>
+                <img src="a304bfd0db0cf654743afccff3290df0176a088bfbe09fc060a17ae03291f364.png" title=" el usuario enters 'Andrew Fuller' into Nombre Completo (completed)" width="1920"/>
+                <img src="a304bfd0db0cf654743afccff3290df0176a088bfbe09fc060a17ae03291f364.png" title=" el usuario clicks on Nombre Completo" width="1920"/>
+                <img src="e81d9c6c7bc2fedc4ff60d656c42a7339b529a0d4f73ab2ada106f4c2aad28e3.png" title=" el usuario clicks on Nombre Completo (completed): <span class='failing-color'>FAILURE</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.7.1</span>
+</div>
+</body>
+</html>

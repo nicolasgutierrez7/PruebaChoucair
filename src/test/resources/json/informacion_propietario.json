@@ -1,19 +1,19 @@
 {
-  "datosPropietario": [
+  "datoscliente": [
     {
-      "datosPropietario1": {
-        "cedula": "1233503500",
-        "nombre": "Daniel",
-        "apellido": " Castillo",
-        "correo": "nsgutierrez011@gmail.com",
-        "clave": "aBc1234567*"
+      "datoscliente1": {
+        "idCliente": "1233503524",
+        "companyName": "CHOUCAIR",
+        "contactName": "NICOLAS",
+        "contactTytle": "NICOLAS TEST",
+        "representative": "Andrew Fuller"
+
       },
-      "datosPropietario2": {
-        "cedula": "1234567890",
-        "nombre": "stiven",
-        "apellido": "florez",
-        "correo": "prueba2@gmail.com",
-        "clave": "abc123"
+      "datoscliente2": {
+        "idCliente": "1233503524",
+        "companyName": "CHOUCAIR",
+        "contactName": "NICOLAS",
+        "contactTytle": "NICOLAS TEST"
       }
     }
   ]

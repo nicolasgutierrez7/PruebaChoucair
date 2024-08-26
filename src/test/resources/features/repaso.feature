@@ -6,8 +6,9 @@ Característica: Crear cuenta en la pagina de ciencuadras
 
   @registro
   Esquema del escenario: crear cuenta propietario
-    Cuando el usuario ingresa los datos para crear cuenta "<datosPropietario>"
+    Cuando el usuario ingresa las credenciales "<datosSesion>"
+    Y el usuario ingresa los datos para crear cuenta "<datoscliente>"
     Entonces el usuario valida la creacion exitosa
     Ejemplos:
-      | datosPropietario  |
-      | datosPropietario1 |
+      |datosSesion| datoscliente  |
+      |datosSesion1| datoscliente1 |

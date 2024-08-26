@@ -1,0 +1,14 @@
+{
+  "datosSesion": [
+    {
+      "datosSesion1": {
+        "usuario": "admin",
+        "clave": "serenity"
+      },
+      "datosSesion2": {
+        "usuario": "admin",
+        "clave": "1234"
+      }
+    }
+  ]
+}

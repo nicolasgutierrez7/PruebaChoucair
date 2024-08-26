@@ -1,42 +1,42 @@
 package com.repaso.ciencuadras.tasks;
 
-import com.repaso.ciencuadras.models.DatosPropietario;
+import com.repaso.ciencuadras.models.DatosCliente;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 
-import static com.repaso.ciencuadras.enums.ConstantesNumericas.*;
+import static com.repaso.ciencuadras.unerinterface.menuUserInterface.*;
 import static com.repaso.ciencuadras.unerinterface.registroUserInterface.*;
 
 public class Registro implements Task {
 
 
-    private final DatosPropietario datosPropietario;
+    private final DatosCliente datosCliente;
 
-    public Registro(DatosPropietario datosPropietario){this.datosPropietario = datosPropietario;}
+    public Registro(DatosCliente datosCliente){this.datosCliente = datosCliente;}
 
     @Override
     public <T extends Actor> void performAs(T actor) {
 
         actor.attemptsTo(
-                Click.on(BTN_INGRESAR),
-                Click.on(BTN_REGISTRARSE),
-                Click.on(BTN_PROPIETARIO),
-                Enter.theValue(datosPropietario.getCedula()).into(TXT_NUMERO_DOCUMENTO),
-                Enter.theValue(datosPropietario.getNombre(),datosPropietario.getApellido()).into(TXT_NOMBRE_COMPLETO),
-                Enter.theValue(datosPropietario.getCorreo()).into(TXT_CORREO_ELECTRONICO),
-                Enter.theValue(datosPropietario.getClave()).into(TXT_CLAVE),
-                Enter.theValue(datosPropietario.getClave()).into(TXT_CONFIRMAR_CLAVE),
-                Utilidades.esperar(SESENTA),
-                Click.on(BTN_REGISTRARME),
-                Utilidades.esperar(DIEZ));
+                Click.on(BTN_MENU),
+                Click.on(BTN_NORTWIND),
+                Click.on(BTN_CLIENTES),
+                Click.on(BTN_NUEVO_CLIENTE),
+                Enter.theValue(datosCliente.getIdCliente()).into(TXT_ID_CLIENTE),
+                Enter.theValue(datosCliente.getCompanyName()).into(TXT_COMPANY_NAME),
+                Enter.theValue(datosCliente.getContactName()).into(TXT_CONTAC_NAME),
+                Enter.theValue(datosCliente.getContactTytle()).into(TXT_CONTAT_TITLE),
+                Enter.theValue(datosCliente.getRepresentative()).into(SELECT_REPRESENTATIVE),
+                Click.on(OPTION_REPRESENTATIVE),
+                Click.on(BTN_SAVE));
 
 
     }
 
-    public static Registro propietario(DatosPropietario datosPropietario){
-        return Tasks.instrumented(Registro.class,datosPropietario);
+    public static Registro propietario(DatosCliente datosCliente){
+        return Tasks.instrumented(Registro.class, datosCliente);
     }
 }
